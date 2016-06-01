@@ -1,5 +1,5 @@
 # Number Separator Format
-Make input only allow numbers with separator format.
+Make input only allow numbers with separator format. [Demo](http://bit.ly/numberseparatorformat)
 
 ### Install
 ```html
