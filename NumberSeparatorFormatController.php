@@ -14,7 +14,15 @@
 </head>
 <body>
 
-<?php echo 'Input value after submit: <strong>'.$_POST['numberFormat'].'</strong>'; ?>
+<?php
+
+$value = $_POST['numberFormat1'];
+if ($value == '') {
+	$value = $_POST['numberFormat2'];
+}
+echo 'Input value after submit: <strong>'.$value.'</strong>';
+
+?>
 
 </body>
 </html>

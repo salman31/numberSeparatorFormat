@@ -12,14 +12,20 @@
 
 	<script>
 		$(document).ready(function(){
-			$("#account_number").numberseparator({
+			$("#account_number1").numberseparator({
 				addedEvery: 4,
 				separator: "-",
-				idErrorMessage: "error_m",
+				idErrorMessage: "error_m1",
+				idForm: "form_target",
+				keepFormatOnSubmit: true
+			});
+			$("#account_number2").numberseparator({
+				addedEvery: 4,
+				separator: "-",
+				idErrorMessage: "error_m2",
 				idForm: "form_target",
 				keepFormatOnSubmit: false
 			});
-			// $("#account_number").numberseparator();
 		});
 	</script>
 
@@ -43,11 +49,18 @@
 <body>
 
 	<div class="container">
-		<strong>Account Number :</strong><br/>
 		<form action="NumberSeparatorFormatController.php" method="post" id="form_target">
-			<input name="numberFormat" type="text" id="account_number" value="123412341234" autocomplete="off">
-			<button type="submit" name="button">submit</button>
-			<span id="error_m">Only numbers.</span>
+			<strong>Account Number :</strong><br/>
+			<input name="numberFormat1" type="text" id="account_number1" autocomplete="off">
+			<button type="submit" name="button">submit (keep format:true)</button>
+			<span id="error_m1">Only numbers.</span>
+
+			<br/>
+			<br/>
+			<strong>Account Number :</strong><br/>
+			<input name="numberFormat2" type="text" id="account_number2" autocomplete="off">
+			<button type="submit" name="button">submit (keep format:false)</button>
+			<span id="error_m2">Only numbers.</span>
 		</form>
 	</div>
 

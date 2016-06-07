@@ -111,7 +111,7 @@ $.fn.numberseparator = function(options){
         $("#" + idForm).submit(function(e) {
             var value_submit = $(element).val();
             var value_submit_result = value_submit.replace(separatorPattern,"");
-            $(element).val(value_submit_result);            
+            $(element).val(value_submit_result);
         });
     }
 
